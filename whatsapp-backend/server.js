@@ -74,7 +74,6 @@ app.get('/messages/sync', (req, res) => {
 
 app.post('/messages/new', (req, res)=>{
     const dbMessage = req.body
-    
     Messages.create(dbMessage, (err, data) => {
         if(err) {
             res.status(500).send(err)
